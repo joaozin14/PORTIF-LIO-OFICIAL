@@ -16,24 +16,10 @@ body {
 /* Cabeçalho */
 .container {
     display: flex;
-    justify-content: space-between; /* Logo na esquerda, botão na direita */
+    justify-content: space-around; /* Logo na esquerda, botão na direita */
     align-items: center; /* Alinha os dois verticalmente ao centro */
     padding: 5px 80px; /* Aumentei o respiro lateral para não colarem na borda */
     background-color: #ffffff;
-}
-
-.logo {
-    padding-top: 25px;
-    width: 270px; 
-    height: 260px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.logo:hover {
-    transform: translate(0px, -10px);
 }
 
 /* Estilização do Botão */
@@ -50,6 +36,8 @@ body {
     gap: 12px;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 15px rgba(255, 140, 0, 0.3);
+    margin-top: 45px;
+    margin-bottom: 50px;
 }
 
 /* Efeito Hover no Botão */
