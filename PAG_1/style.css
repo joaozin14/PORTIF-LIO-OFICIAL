@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F0F0;
+    font-family: 'Poppins', sans-serif;
+    color: #001F5B;
+    line-height: 1.8; /* Aumentei um pouco o espaçamento entre linhas */
+}
+
+/* Cabeçalho */
+.container {
+    display: flex;
+    justify-content: space-between; /* Logo na esquerda, botão na direita */
+    align-items: center; /* Alinha os dois verticalmente ao centro */
+    padding: 5px 80px; /* Aumentei o respiro lateral para não colarem na borda */
+    background-color: #ffffff;
+}
+
+.logo {
+    padding-top: 25px;
+    width: 270px; 
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: translate(0px, -10px);
+}
+
+/* Estilização do Botão */
+.btn-download {
+    background-color: #FF8C00; /* Laranja da sua paleta */
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 50px; /* Arredondado para combinar com a logo */
+    font-weight: 600;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+/* Efeito Hover no Botão */
+.btn-download:hover {
+    background-color: #001F5B; /* Muda para o azul no hover */
+    transform: translateY(-3px); /* Leve subida */
+    box-shadow: 0px 6px 20px rgba(0, 31, 91, 0.4);
+}
+
+/* Ícone dentro do botão */
+.btn-download i {
+    font-size: 1.2rem;
+}
+
+.linha {
+    height: 5px;
+    background: linear-gradient(to right, #FF8C00, #001F5B);
+    width: 100%;
+}
+
+/* Layout Principal */
+.container-2 {
+    max-width: 1800px; /* Aumentei a largura máxima para caber a foto maior */
+    margin: 60px auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: flex-start; /* Alinha o topo da foto com o topo do texto */
+    gap: 80px; /* Aumentei bem o espaço entre foto e texto */
+}
+
+.foto {
+    width: 630px; /* Foto maior como solicitado */
+    height: 430px;
+    border-radius: 25px;
+    object-fit: cover;
+    border: 5px solid #001F5B;
+    box-shadow: 15px 15px 0px #FF8C00;
+    flex-shrink: 0; /* Impede que a foto "esmague" em telas menores */
+    margin-right: 50px;
+    margin-top: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto:hover {
+    /* Move a foto 5px para cima e para a esquerda */
+    transform: translate(-5px, -5px); 
+    
+    /* Aumenta a sombra para parecer que a foto está mais longe do fundo */
+    box-shadow: 22px 22px 0px #FF8C00;
+}
+
+/* Bloco de Texto */
+.bio-text {
+    display: flex;
+    flex-direction: column; /* Garante que os textos fiquem um embaixo do outro */
+    gap: 25px; /* Espaço entre o primeiro e o segundo parágrafo */
+    margin-top: 110px;
+}
+
+.bio-text h2 {
+    font-size: 1.46rem;
+    font-weight: 700;
+    text-align: justify;
+}
+
+/* Container Geral */
+.secao-projetos {
+    max-width: 1800px;
+    margin: 280px auto;
+    padding: 0 40px;
+}
+
+.titulo-sessao {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #001F5B;
+    margin-bottom: 40px;
+    border-left: 8px solid #FF8C00;
+    padding-left: 20px;
+}
+
+/* Carrossel */
+.carrosel-container {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 5px;
+    scroll-behavior: smooth;
+}
+
+/* Card Estilizado */
+.projeto-card {
+    min-width: 400px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+/* Área do Link/Ícone */
+.github-link {
+    background-color: #001F5B; /* Seu tom de azul */
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.github-link i {
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+
+.github-link span {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.projeto-card:hover .github-link {
+    background-color: #FF8C00; /* Muda para o seu laranja no hover */
+}
+
+.projeto-card:hover .github-link span {
+    opacity: 1; /* Mostra o texto "Ver Código" apenas no hover */
+}
+
+/* Texto abaixo do ícone */
+.projeto-info {
+    padding: 25px;
+}
+
+.projeto-info h3 {
+    color: #001F5B;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.projeto-info p {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Customização da barra de rolagem */
+.carrosel-container::-webkit-scrollbar { height: 8px; }
+.carrosel-container::-webkit-scrollbar-thumb { background: #001F5B; border-radius: 10px; }
+
+/* --- MEDIA QUERIES (A Mágica da Responsividade) --- */
+
+/* Para Tablets e Telas Médias */
+@media (max-width: 1024px) {
+    .container-2 {
+        flex-direction: column; /* Foto em cima, texto embaixo */
+        align-items: center;
+    }
+
+    .foto {
+        width: 80%; /* Foto ocupa mais espaço na tela do tablet */
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .bio-text {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .bio-text h2 {
+        text-align: center;
+    }
+}
+
+/* Para Celulares */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Logo e botão empilhados */
+        text-align: center;
+    }
+
+    .logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .foto {
+        width: 100%;
+        box-shadow: 10px 10px 0px #FF8C00; /* Sombra menor no celular */
+    }
+
+    .projeto-card {
+        min-width: 280px; /* Cards menores para celulares */
+    }
+
+    .titulo-sessao {
+        text-align: center;
+        border-left: none;
+        border-bottom: 4px solid #FF8C00;
+        padding-bottom: 10px;
+    }
+}
